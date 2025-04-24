@@ -25,7 +25,7 @@ pnpm add json-to-jsdoc
 ## 🚀 Usage
 
 ```javascript
-import { jsonToJSDoc } from '@shiloh/json-to-jsdoc';
+import { jsonToJSDoc } from 'json-to-jsdoc';
 
 const jsonStr = JSON.stringify({
   id: 1,
