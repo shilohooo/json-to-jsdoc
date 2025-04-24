@@ -1,6 +1,6 @@
 import { EMPTY_STR } from './constants'
-import { flattenObject } from './utils/flat.ts'
-import { convertToJsDoc } from './utils/convert.ts'
+import { flattenObject } from './utils/flat'
+import { convertToJsDoc } from './utils/convert'
 import type { ConvertOption } from './types/global'
 
 /**

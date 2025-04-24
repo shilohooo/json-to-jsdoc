@@ -1,6 +1,6 @@
 import { DOT, EMPTY_STR, ROOT_TYPE_NAME } from '../constants'
 import { ConvertOption, type CustomType, type Property } from '../types/global'
-import { detectValType } from './type-detect.ts'
+import { detectValType } from './type-detect'
 import { pascalCase } from 'change-case'
 import pluralize from 'pluralize-esm'
 
