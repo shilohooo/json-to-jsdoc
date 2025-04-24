@@ -1,12 +1,12 @@
 {
   "name": "json-to-jsdoc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.6.5",
   "author": "shiloh <lixiaolei595@gmail.com>",
   "license": "MIT",
-  "description": "JSON to jsdoc converter",
+  "description": "JSON to JSDoc converter",
   "type": "module",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
