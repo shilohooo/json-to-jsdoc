@@ -7,19 +7,19 @@ Generate JSDoc comments from JSON object or array.
 ### NPM
 
 ```shell
-npm install @shiloh/json-to-jsdoc
+npm install json-to-jsdoc
 ```
 
 ### Yarn
 
 ```shell
-yarn add @shiloh/json-to-jsdoc
+yarn add json-to-jsdoc
 ```
 
 ### PNPM
 
 ```shell
-pnpm add @shiloh/json-to-jsdoc
+pnpm add json-to-jsdoc
 ```
 
 ## 🚀 Usage
