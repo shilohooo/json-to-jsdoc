@@ -1,0 +1,24 @@
+{
+  "name": "json-to-jsdoc",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.6.5",
+  "author": "shiloh <lixiaolei595@gmail.com>",
+  "license": "MIT",
+  "description": "JSON to jsdoc converter",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.3.0",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "change-case": "^5.4.4",
+    "pluralize-esm": "^9.0.5"
+  }
+}
