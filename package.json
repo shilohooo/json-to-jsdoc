@@ -12,6 +12,28 @@
     "build": "tsc && vite build",
     "test": "vitest"
   },
+  "keywords": [
+    "json2jsdoc",
+    "json to jsdoc",
+    "json",
+    "jsdoc",
+    "docs",
+    "js docs",
+    "javascript",
+    "converter",
+    "generator",
+    "typedef",
+    "property"
+  ],
+  "repository": {
+    "url": "git+https://github.com/shilohooo/json-to-jsdoc.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/shilohooo/json-to-jsdoc#readme",
+  "bugs": {
+    "email": "lixiaolei595@gmail.com",
+    "url": "https://github.com/shilohooo/json-to-jsdoc/issues"
+  },
   "devDependencies": {
     "typescript": "~5.7.2",
     "vite": "^6.3.0",
