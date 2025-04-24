@@ -4,9 +4,6 @@ Generate JSDoc comments from JSON object or array.
 
 ## 📦 Installation
 
-> [!NOTE]
-> 🚧 The project has not yet been packaged and published to NPM
-
 ### NPM
 
 ```shell
