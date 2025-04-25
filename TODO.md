@@ -1,3 +1,4 @@
 # TODO
 
-- [ ] Publish to NPM
+- [x] Publish to NPM
+- [ ] Fix property is possibly undefined error 
