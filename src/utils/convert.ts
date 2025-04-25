@@ -37,13 +37,23 @@ export function convertToJsDoc(
 export function generateProps(flattenedObj: Record<string, any>, option: ConvertOption): Property[] {
   const props: Property[] = []
   for (const key in flattenedObj) {
+    if (!key) {
+      continue
+    }
+
     // primitive types
     if (key.indexOf(DOT) === -1) {
+      const parentPath = option.rootTypeName ?? ROOT_TYPE_NAME
+      // skip duplicated property
+      if (props.some(p => p.path === key && p.parentPath === parentPath)) {
+        continue
+      }
+
       props.push({
+        parentPath,
         path: key,
         value: flattenedObj[key],
         type: detectValType(key, flattenedObj[key]),
-        parentPath: option.rootTypeName ?? ROOT_TYPE_NAME
       })
       continue
     }
@@ -53,6 +63,7 @@ export function generateProps(flattenedObj: Record<string, any>, option: Convert
     for (let i = keyArr.length - 1; i >= 0; i--) {
       let path = keyArr[i]
       const parentPath = keyArr[i - 1]?.replace(/\[\d+]/, EMPTY_STR) ?? option.rootTypeName
+      // @ts-ignore
       const pathWithoutBrackets = path.replace(/\[\d]/, EMPTY_STR)
       // skip duplicated property
       if (props.some(p => p.path === pathWithoutBrackets && p.parentPath === parentPath)) {
@@ -60,6 +71,7 @@ export function generateProps(flattenedObj: Record<string, any>, option: Convert
       }
 
       const property: Property = {
+        // @ts-ignore
         parentPath,
         path: pathWithoutBrackets,
         value: flattenedObj[key],
@@ -69,10 +81,12 @@ export function generateProps(flattenedObj: Record<string, any>, option: Convert
       if (i !== keyArr.length - 1) {
         property.type = pascalCase(pluralize.singular(pathWithoutBrackets))
         // array
+        // @ts-ignore
         if (/\w\[\d+]/.test(path)) {
           property.type = `${property.type}[]`
         }
       } else {
+        // @ts-ignore
         property.type = detectValType(path, property.value)
       }
 
