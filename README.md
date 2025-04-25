@@ -78,6 +78,10 @@ const jsDoc = jsonToJSDoc(jsonStr, {
 This project is inspired by [json-to-jsdoc-converter](https://gitlab.com/nvidia1997/json-to-jsdoc-converter), developed
 by [Rumen Krastev Shishkov](https://gitlab.com/nvidia1997), thank you very much~
 
+## 📝 Changelog
+
+See [Releases](https://github.com/shilohooo/json-to-jsdoc/releases) page.
+
 ## 💪 Contributors
 
 |                                             Shiloh                                              |
